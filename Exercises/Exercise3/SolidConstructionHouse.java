@@ -2,9 +2,6 @@ import java.util.*;
 
 public class SolidConstructionHouse extends House{
     
-    private double m_length;
-    private double m_width;
-    
     public SolidConstructionHouse(double length, double width){
         super(length,width); // Using House's constructor
     }
@@ -20,13 +17,5 @@ public class SolidConstructionHouse extends House{
            return 0;
            
         }
-        
-    }
-        
-
-    
-    //testing
-    public double getWidth(){
-        return m_width;
     }
 }

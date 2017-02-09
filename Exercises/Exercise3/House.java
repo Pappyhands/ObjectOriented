@@ -9,12 +9,10 @@ public class House implements IEstimatable{
         m_length = length;
         m_width = width;
     }
-    
+
     // Calculates estimated cost of house by multiplying sq footage by 97.
     @Override
     public double estimate(){
-        
-        
         // Ask Mark (?)
         try{
             return (m_length*m_width) * 97; //Length * Width then 97
@@ -27,8 +25,6 @@ public class House implements IEstimatable{
     }
         
 
-    
-    //testing
     public double getWidth(){
         return m_width;
     }
