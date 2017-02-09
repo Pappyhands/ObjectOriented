@@ -1,0 +1,71 @@
+•	What is a default constructor?	
+A default constructor is a constructor which can be called with no arguments (either defined with an empty parameter list, or with default arguments provided for every parameter).
+
+•	What is a copy constructor?
+A copy constructor is a constructor which is called with a different instance of itself as an argument. The constructor clones all parameters from the source instance and puts it into a completely different instance of the same object. (IT LITERALLY COPIES AN OBJECTS VALUES INTO ANOTHER NEW OBJECT)
+•	Create a class and do not give it a constructor. Is it possible to create an instance of your class even if you did not define a constructor?
+•	public class Book {
+•	}
+•	//THIS COMPILES
+•	public class Shelf extends Book{
+•		
+•		public static void main(String[] args){
+•			Book a = new Book();
+•		}
+•	}
+
+•	Create a class and give it a copy constructor. Is it possible to create an instance of your class using the default constructor?
+•	
+•	public class Book {
+•		public Book(Book aBook){
+•		}
+•	}
+•	
+•	//THIS DOESN’T COMPILE ANYMORE
+•	public class Shelf extends Book{
+•		
+•		public static void main(String[] args){
+•			Book a = new Book();
+•		}
+•	}
+
+
+
+
+
+
+
+
+•	Is it possible to call one constructor from inside another constructor?
+You cannot do it without the “this” syntax. You must call the constructor at the beginning of whatever other constructor is calling it BEFORE adding more to your new constructor.
+
+public class Book {
+	private String m_name;
+	private int m_pages;
+	
+	public Book(String name){
+		m_name = name;
+	}
+	
+	public Book(String name, int pages){
+		this(name);
+		m_pages = pages;
+	}
+}
+
+•	In the Lecturcize you learned about the has-a relationship line.  There are actually two different versions of this relationship: aggregation and composition.  One uses an unfilled diamond and the other uses a solid diamond.  What is the difference between these two relationships? 
+Aggregation is when objects have a relationship but they also have their own life cycles, one’s exist doesn’t affect the other.
+Composition is a form of aggregation in which if the parent object is destroyed, the child objects would cease to exist.
+•	What does the term cardinality mean and how does it apply to a has-a relationship line?¬¬
+Cardinality is the number of the instances you can have of anything / any type, in a ‘has-a’ relationship
+•	In the Lecturcize we created a Person class that had a String attribute that represents its name and a Dog attribute that represents the person's pet dog.  In the UML diagram we put the String attribute in the attributes box of the class, and we created a different class box for Dog with a has-a relationship line between Person and Dog.  Could we have listed the Dog in the attribute box instead?  Could we have moved the String attribute out of the attribute box and created a has-a relationship line between Person and String?
+Yes, you could, if you pull out the object you simply don’t have to list it within the attribute box
+•	What is the difference between a primitive type in Java and an object type?
+Memory size (primitives are the slows and can’t get bigger while objects can), the new “syntax” is required for Objects but NOT primitives (eg. Person me = new Person(), int x = 0)
+•	Is it possible to define your own primitive types in Java?
+No.
+•	Is it possible to define your own object types in Java?¬¬
+Yes.
+•	Create a UML diagram that illustrates a Zoo that contains many Elephants, Lions, and Frogs.  Give the Zoo and the animals a few primitive types.  Finally, implement the UML diagram in Java.
+ 
+******************GET THIS CHECKED!!!***********
