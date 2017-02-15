@@ -19,13 +19,6 @@ public class House implements IEstimatable{
         } catch(Exception e) {
             System.err.println("Error!");
            return 0;
-           
         }
-        
-    }
-        
-
-    public double getWidth(){
-        return m_width;
     }
 }

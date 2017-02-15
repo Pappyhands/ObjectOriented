@@ -6,7 +6,7 @@ public class SolidConstructionHouse extends House{
         super(length,width); // Using House's constructor
     }
     
-    // Calculates estimated cost of house by multiplying sq footage by 97.
+    // Calculates estimated cost of house by multiplying sq footage by 97 then an increased 25%.
     @Override
     public double estimate(){
         // Ask Mark (?)
