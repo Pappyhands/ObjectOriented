@@ -17,11 +17,10 @@ public class HomeRunTextRpt{
     public List<DataPair> loadData() throws IOException{
         
         // Opens File using the filename and creates an ArrayList of DataPairs
-      	File dataFile = new File(m_dataFile);
         List<DataPair> l = new ArrayList();
             
             // Goes through everything in the file
-            try (BufferedReader br = new BufferedReader(new FileReader(dataFile))) {
+            try (BufferedReader br = new BufferedReader(new FileReader(new File(m_dataFile)))) {
            
 			String line;
 			DataPair pair;
