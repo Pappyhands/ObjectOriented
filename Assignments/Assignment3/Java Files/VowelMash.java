@@ -11,6 +11,7 @@ public class VowelMash implements ICrypto{
     
     private VowelMash(){}
     
+    @Override
     public String encrypt(String message){
         String Msg = "";
         int size = Factory.getInstance().createParser(message).getCharCount();
@@ -41,6 +42,7 @@ public class VowelMash implements ICrypto{
         return Msg;
     }
     
+    @Override
     public String decrypt(String message){
         String Msg = "";
         int size = Factory.getInstance().createParser(message).getCharCount();

@@ -11,6 +11,7 @@ public class WordReverse implements ICrypto{
     
     private WordReverse(){}
     
+    @Override
     public String encrypt(String message){
         String Msg = "";
         int size = Factory.getInstance().createParser(message).getWordCount();
@@ -31,6 +32,7 @@ public class WordReverse implements ICrypto{
         return newMsg;
     }
     
+    @Override
     public String decrypt(String message){
         String Msg = "";
         int size = Factory.getInstance().createParser(message).getWordCount();
