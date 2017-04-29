@@ -1,14 +1,14 @@
-public class Ball extends GameObject
+public class Ball4 extends GameObject
 {
-  public Ball(int x, int y, int w, int h, int dX, int dY)
+  public Ball4(int x, int y, int w, int h, int dX, int dY)
   {
-    super("./enemies/ball.png", x, y, w, h, dX, dY);
+    super("./enemies/ball4.png", x, y, w, h, dX, dY);
   }
 
   @Override
   public void tick(int maxw, int maxh)
   {
-    m_x = m_x + m_dX;
+    m_x = m_x - m_dX;
     m_y = m_y + m_dY;
 
     if (m_x > maxw)

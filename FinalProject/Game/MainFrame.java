@@ -16,15 +16,19 @@ public class MainFrame extends JFrame
   public MainFrame()
   {
     super("Game Engine Example");
-    setSize(400, 300);
+    setSize(500, 500);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     int interval = 100;
 
     // model
     List<IGameObject> objects = new ArrayList<IGameObject>();
-    objects.add(Factory.getInstance().createEnemy(10, 10, 30, 30, 5, 5));
-    objects.add(Factory.getInstance().createHero(10, 100, 40, 40, 5, 5));
+
+    // Hero is always at spot #1, enemies are 4 & 5, statusView
+    objects.add(Factory.getInstance().createHero(10, 100, 120, 120, 5, 5, 1)); // always make hero first o read list!
+    objects.add(Factory.getInstance().createEnemy(10, 10, 30, 30, 5, 5, 4));
+    objects.add(Factory.getInstance().createEnemy(10, 10, 30, 30, 5, 5, 5));
+
 
     // view
     IGameView view = Factory.getInstance().createMainView(objects);

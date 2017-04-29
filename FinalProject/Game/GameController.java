@@ -38,7 +38,7 @@ public class GameController implements ActionListener, IGameController, KeyListe
       obj.tick();
     }
   }
-  
+
   @Override
   public void keyPressed(KeyEvent e)
   {

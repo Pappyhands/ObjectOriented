@@ -1,22 +1,23 @@
-public class Hero extends GameObject
+public class Roadhog extends GameObject
 {
   private int m_ticks = 0;
-  private java.util.Random m_rand = new java.util.Random();
+  private java.util.Random m_rand = new java.util.Random(); // random jumping part 1.
 
-  public Hero(int x, int y, int w, int h, int dX, int dY)
+  public Roadhog(int x, int y, int w, int h, int dX, int dY)
   {
-    super("./elf.png", x, y, w, h, 0, 0);
+    super("./heros/roadhog.png", x, y, w, h, 0, 0);
   }
 
   @Override
   public void tick(int maxw, int maxh)
   {
     m_ticks++;
-    if (m_ticks % 100 == 0)
-    {
-      m_x = m_rand.nextInt(maxw);
-      m_y = m_rand.nextInt(maxh);
-    }
+    // random jumping part 2.
+    // if (m_ticks % 100 == 0)
+    // {
+    //   m_x = m_rand.nextInt(maxw);
+    //   m_y = m_rand.nextInt(maxh);
+    // }
     m_x += m_dX;
     m_y += m_dY;
 
@@ -40,7 +41,7 @@ public class Hero extends GameObject
       m_dX = -5;
       m_dY = 0;
     }
-    else if (ch == 's')
+    else if (ch == 'd')
     {
       m_dX = 5;
       m_dY = 0;
@@ -50,7 +51,7 @@ public class Hero extends GameObject
       m_dX = 0;
       m_dY = -5;
     }
-    else if (ch == 'z')
+    else if (ch == 's')
     {
       m_dX = 0;
       m_dY = 5;
