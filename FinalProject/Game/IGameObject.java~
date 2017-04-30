@@ -7,9 +7,9 @@ public interface IGameObject
   public BufferedImage getImage();
   public Rectangle getRectangle();
   public int getX();
-  public void setX(int x);
+  public void setX();
   public int getY();
-  public void setY(int y);
+  public void setX();
   public int getW();
   public int getH();
   public int getDX();

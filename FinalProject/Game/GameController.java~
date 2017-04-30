@@ -27,7 +27,7 @@ public class GameController implements ActionListener, IGameController, KeyListe
   {
     m_timer.start();
     m_objects.get(0).addEnemy1(m_objects.get(1));
-    m_objects.get(0).addEnemy2(m_objects.get(2));
+    m_objects.get(0).addEnemy1(m_objects.get(1));
   }
 
   @Override
