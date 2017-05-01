@@ -40,7 +40,7 @@ public class Factory implements IFactory
       Class c = Class.forName(names.get(whichOne));
       o =  (IGameObject)c.getConstructor(int.class,int.class,int.class,int.class,int.class,int.class).newInstance(x,y,w,h,dX,dY);
     }catch(Exception e){
-      throw new Error("Unable to create instance.");
+      throw new Error("Unable to create instance of Enemy.");
     }
     return o;
     // return new Ball(x, y, w, h, dX, dY);
@@ -56,7 +56,7 @@ public class Factory implements IFactory
       Class c = Class.forName(names.get(whichOne));
       o =  (IGameObject)c.getConstructor(int.class,int.class,int.class,int.class,int.class,int.class).newInstance(x,y,w,h,dX,dY);
     }catch(Exception e){
-      throw new Error("Unable to create instance.");
+      throw new Error("Unable to create instance of Hero.");
     }
     return o;
     // return new Hero(x, y, w, h, dX, dY);
@@ -69,9 +69,18 @@ public class Factory implements IFactory
   }
 
   @Override
-  public IGameView createStatusView(List<IGameObject> objects)
+  public IGameView createStatusView(List<IGameObject> objects, int whichOne)
   {
-    return new StatusView(objects);
+    IGameView v = null;
+    try{
+      System.out.println(names);
+      Class c = Class.forName(names.get(whichOne));
+      v =  (IGameView)c.getConstructor(List.class).newInstance(objects);
+    }catch(Exception e){
+      throw new Error("Unable to create instance of statusView.");
+    }
+    return v;
+    //return new StatusView(objects);
   }
 
   @Override

@@ -55,7 +55,7 @@ public abstract class GameObject implements IGameObject
   @Override
   public int getY()
   { return m_y; }
-  
+
   @Override
   public void setY(int y)
   { m_y = y; }

@@ -25,15 +25,15 @@ public class MainFrame extends JFrame
     List<IGameObject> objects = new ArrayList<IGameObject>();
 
     // Hero is always at spot #1, enemies are 4 & 5, statusView
-						//y  , x  , w  , h   dX,dY, object #
-    objects.add(Factory.getInstance().createHero(300, 300, 100, 100, 4, 4, 1)); // always make hero first o read list!
-    objects.add(Factory.getInstance().createEnemy(300, 200, 60, 60, 2, 2, 4));
-    objects.add(Factory.getInstance().createEnemy(900, 900, 30, 30, 0, 0, 5));
+						                                    //y  , x  , w  , h   dX,dY, object #
+    objects.add(Factory.getInstance().createHero(0, 00, 120, 120, 5, 5, 1)); // always make hero first o read list!
+    objects.add(Factory.getInstance().createEnemy(300, 300, 40, 40, 5, 5, 4));
+    objects.add(Factory.getInstance().createEnemy(300, 300, 40, 40, 5, 5, 5));
 
 
     // view
     IGameView view = Factory.getInstance().createMainView(objects);
-    IGameView statusView = Factory.getInstance().createStatusView(objects);
+    IGameView statusView = Factory.getInstance().createStatusView(objects, 8); // 8th object from txt file is the view controller
     List<IGameView> views = new ArrayList<IGameView>();
     views.add(view);
     views.add(statusView);

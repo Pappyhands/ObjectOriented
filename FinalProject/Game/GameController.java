@@ -17,7 +17,7 @@ public class GameController implements ActionListener, IGameController, KeyListe
     m_views = views;
     m_timer = new Timer(interval, this);
     views.get(0).getJPanel().addKeyListener(this);
-    
+
    // m_objects.get(0).addEnemy1(m_objects.get(1));
    // m_objects.get(0).addEnemy2(m_objects.get(2));
   }
@@ -26,6 +26,7 @@ public class GameController implements ActionListener, IGameController, KeyListe
   public void startGame()
   {
     m_timer.start();
+    // adds the enemies so the hero can interactive with them.
     m_objects.get(0).addEnemy1(m_objects.get(1));
     m_objects.get(0).addEnemy2(m_objects.get(2));
   }
