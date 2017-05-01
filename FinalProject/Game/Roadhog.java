@@ -80,23 +80,23 @@ public class Roadhog extends GameObject
    // System.out.println(m_enemy2);
     if (ch == 'a')
     {
-      m_dX = -5;
+      m_dX = -10;
       m_dY = 0;
     }
     else if (ch == 'd')
     {
-      m_dX = 5;
+      m_dX = 10;
       m_dY = 0;
     }
     else if (ch == 'w')
     {
       m_dX = 0;
-      m_dY = -5;
+      m_dY = -2;
     }
     else if (ch == 's')
     {
       m_dX = 0;
-      m_dY = 5;
+      m_dY = 2;
     }
     else
     {
